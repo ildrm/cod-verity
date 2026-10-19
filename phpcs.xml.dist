@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="CODVerity baseline">
+  <description>Portable correctness and whitespace baseline. WordPress conventions are used in runtime code; this is not a claim of a full WPCS audit.</description>
+  <file>src</file><file>codverity-order-verification-for-woocommerce.php</file><file>uninstall.php</file>
+  <arg name="extensions" value="php"/><arg name="colors"/>
+  <rule ref="Generic.PHP.ForbiddenFunctions"/>
+  <rule ref="Generic.PHP.DeprecatedFunctions"/>
+  <rule ref="Generic.Files.ByteOrderMark"/>
+  <rule ref="Generic.Files.EndFileNewline"/>
+  <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
+</ruleset>

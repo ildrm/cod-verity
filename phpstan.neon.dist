@@ -1,0 +1,13 @@
+parameters:
+    level: 3
+    paths:
+        - src
+        - codverity-order-verification-for-woocommerce.php
+        - uninstall.php
+    scanFiles:
+        - build/stubs/wordpress-stubs.php
+        - build/stubs/woocommerce-stubs.php
+        - build/stubs/action-scheduler-functions.php
+    bootstrapFiles:
+        - tools/static-bootstrap.php
+    tmpDir: build/phpstan

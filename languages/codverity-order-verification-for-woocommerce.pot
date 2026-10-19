@@ -1,0 +1,771 @@
+# Copyright (C) 2026 CODVerity
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CODVerity — Cash on Delivery Order Verification for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cod-verity\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-19T16:41:12+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: codverity-order-verification-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: codverity-order-verification-for-woocommerce.php
+msgid "CODVerity — Cash on Delivery Order Verification for WooCommerce"
+msgstr ""
+
+#. Description of the plugin
+#: codverity-order-verification-for-woocommerce.php
+msgid "Secure post-checkout customer confirmation for cash-on-delivery orders."
+msgstr ""
+
+#. Author of the plugin
+#: codverity-order-verification-for-woocommerce.php
+msgid "CODVerity"
+msgstr ""
+
+#: src/Admin.php:45
+msgid "Pending"
+msgstr ""
+
+#: src/Admin.php:45
+#: src/Admin.php:79
+msgid "Awaiting response"
+msgstr ""
+
+#: src/Admin.php:46
+#: src/Admin.php:80
+msgid "Customer confirmed"
+msgstr ""
+
+#: src/Admin.php:46
+#: src/Admin.php:81
+msgid "Customer cancelled"
+msgstr ""
+
+#: src/Admin.php:47
+#: src/Admin.php:82
+msgid "Expired"
+msgstr ""
+
+#: src/Admin.php:47
+msgid "Interrupted — review required"
+msgstr ""
+
+#: src/Admin.php:48
+msgid "Manually confirmed"
+msgstr ""
+
+#: src/Admin.php:48
+msgid "Manually cancelled"
+msgstr ""
+
+#: src/Admin.php:49
+msgid "Confirmation in progress"
+msgstr ""
+
+#: src/Admin.php:49
+msgid "Cancellation in progress"
+msgstr ""
+
+#: src/Admin.php:49
+msgid "Expiration in progress"
+msgstr ""
+
+#: src/Admin.php:50
+msgid "Queued"
+msgstr ""
+
+#: src/Admin.php:50
+msgid "Sending"
+msgstr ""
+
+#: src/Admin.php:51
+msgid "Accepted by mail transport"
+msgstr ""
+
+#: src/Admin.php:51
+msgid "Transport failed"
+msgstr ""
+
+#: src/Admin.php:52
+msgid "Retry scheduled"
+msgstr ""
+
+#: src/Admin.php:52
+msgid "Attempts exhausted"
+msgstr ""
+
+#: src/Admin.php:52
+msgid "Transport outcome unknown — review before reissuing"
+msgstr ""
+
+#: src/Admin.php:58
+#: src/Admin.php:242
+msgid "You are not authorized."
+msgstr ""
+
+#: src/Admin.php:61
+msgid "Overview"
+msgstr ""
+
+#: src/Admin.php:61
+msgid "Verification Queue"
+msgstr ""
+
+#: src/Admin.php:61
+msgid "Settings"
+msgstr ""
+
+#: src/Admin.php:61
+msgid "Reports"
+msgstr ""
+
+#: src/Admin.php:61
+msgid "Activity Logs"
+msgstr ""
+
+#: src/Admin.php:61
+msgid "Diagnostics"
+msgstr ""
+
+#: src/Admin.php:62
+msgid "Verify customer intent before fulfilling cash-on-delivery orders. Confirmation does not record a payment."
+msgstr ""
+
+#: src/Admin.php:62
+msgid "CODVerity navigation"
+msgstr ""
+
+#: src/Admin.php:68
+msgid "New automation is disabled. Existing verification links and scheduled workflows may still finish. Enable automation in Settings when ready."
+msgstr ""
+
+#: src/Admin.php:78
+msgid "Total requests"
+msgstr ""
+
+#: src/Admin.php:83
+#: src/Admin.php:97
+#: src/Admin.php:192
+msgid "Notification problems"
+msgstr ""
+
+#: src/Admin.php:84
+msgid "Manual resolutions"
+msgstr ""
+
+#: src/Admin.php:85
+msgid "Suspected duplicates"
+msgstr ""
+
+#: src/Admin.php:86
+msgid "Interrupted"
+msgstr ""
+
+#: src/Admin.php:90
+msgid "Expired and interrupted orders may remain on hold. Review them before fulfillment. Duplicate warnings are advisory and never reject an order."
+msgstr ""
+
+#: src/Admin.php:93
+msgid "State"
+msgstr ""
+
+#: src/Admin.php:93
+msgid "All states"
+msgstr ""
+
+#: src/Admin.php:96
+msgid "From"
+msgstr ""
+
+#: src/Admin.php:96
+msgid "Through"
+msgstr ""
+
+#: src/Admin.php:96
+msgid "Exact order ID"
+msgstr ""
+
+#: src/Admin.php:97
+#: src/Admin.php:192
+msgid "Duplicate warnings"
+msgstr ""
+
+#: src/Admin.php:98
+msgid "Filter"
+msgstr ""
+
+#: src/Admin.php:106
+msgid "Order"
+msgstr ""
+
+#: src/Admin.php:106
+msgid "Verification"
+msgstr ""
+
+#: src/Admin.php:106
+msgid "Notification"
+msgstr ""
+
+#: src/Admin.php:106
+msgid "Dates"
+msgstr ""
+
+#: src/Admin.php:106
+msgid "Attempts"
+msgstr ""
+
+#: src/Admin.php:106
+msgid "Actions"
+msgstr ""
+
+#: src/Admin.php:110
+msgid "Suspected duplicate"
+msgstr ""
+
+#: src/Admin.php:110
+msgid "Created:"
+msgstr ""
+
+#: src/Admin.php:110
+#: src/Admin.php:228
+msgid "Expires:"
+msgstr ""
+
+#: src/Admin.php:110
+msgid "Last attempt:"
+msgstr ""
+
+#: src/Admin.php:113
+msgid "No requests match these filters. Enable CODVerity for new orders, or enter an existing order ID to test eligibility and start verification."
+msgstr ""
+
+#: src/Admin.php:119
+#, php-format
+msgid "%1$d records · Page %2$d of %3$d"
+msgstr ""
+
+#: src/Admin.php:120
+msgid "Previous"
+msgstr ""
+
+#: src/Admin.php:120
+msgid "Next"
+msgstr ""
+
+#: src/Admin.php:132
+msgid "Order action"
+msgstr ""
+
+#: src/Admin.php:133
+msgid "Test eligibility"
+msgstr ""
+
+#: src/Admin.php:134
+msgid "Start verification"
+msgstr ""
+
+#: src/Admin.php:136
+msgid "Reissue link and email"
+msgstr ""
+
+#: src/Admin.php:136
+msgid "Manually confirm"
+msgstr ""
+
+#: src/Admin.php:136
+msgid "Cancel held order"
+msgstr ""
+
+#: src/Admin.php:136
+msgid "Stop verification"
+msgstr ""
+
+#: src/Admin.php:139
+msgid "Reason (required for changes)"
+msgstr ""
+
+#: src/Admin.php:139
+msgid "I approve this change. Cancellation changes the order; stopping leaves its current status."
+msgstr ""
+
+#: src/Admin.php:140
+msgid "Apply action"
+msgstr ""
+
+#: src/Admin.php:148
+msgid "Enable new automation"
+msgstr ""
+
+#: src/Admin.php:149
+msgid "Hold orders until verified"
+msgstr ""
+
+#: src/Admin.php:150
+msgid "Minimum total (blank = unrestricted)"
+msgstr ""
+
+#: src/Admin.php:151
+msgid "Maximum total (blank = unrestricted)"
+msgstr ""
+
+#: src/Admin.php:152
+msgid "Included categories (any matching item)"
+msgstr ""
+
+#: src/Admin.php:153
+msgid "Excluded categories (any match excludes order)"
+msgstr ""
+
+#: src/Admin.php:154
+msgid "Link validity in hours (1–168)"
+msgstr ""
+
+#: src/Admin.php:155
+msgid "Enable reminders"
+msgstr ""
+
+#: src/Admin.php:156
+msgid "Reminder hours from issue (one or two, comma separated)"
+msgstr ""
+
+#: src/Admin.php:157
+msgid "Transport retries after initial attempt (0–3)"
+msgstr ""
+
+#: src/Admin.php:158
+msgid "Automatically cancel expired plugin-held orders"
+msgstr ""
+
+#: src/Admin.php:159
+msgid "Show advisory duplicate warnings"
+msgstr ""
+
+#: src/Admin.php:160
+msgid "Duplicate lookback hours (1–168)"
+msgstr ""
+
+#: src/Admin.php:161
+msgid "Reissue cooldown in seconds (60–86400)"
+msgstr ""
+
+#: src/Admin.php:162
+msgid "Email subject"
+msgstr ""
+
+#: src/Admin.php:163
+msgid "Plain-text email message"
+msgstr ""
+
+#: src/Admin.php:164
+msgid "Sender name (blank = transport default)"
+msgstr ""
+
+#: src/Admin.php:165
+msgid "Sender email (blank = transport default)"
+msgstr ""
+
+#: src/Admin.php:166
+msgid "Audit retention days (7–730)"
+msgstr ""
+
+#: src/Admin.php:167
+msgid "Resolved request secret retention days (30–3650)"
+msgstr ""
+
+#: src/Admin.php:168
+msgid "Delete CODVerity data on uninstall"
+msgstr ""
+
+#: src/Admin.php:178
+msgid "Empty inclusion allows all categories. Variation parent categories are used; exact category matches apply. Use Ctrl/Command to select multiple (up to 500 categories shown)."
+msgstr ""
+
+#: src/Admin.php:180
+msgid "Warning: enabling this cancels unresponsive orders still held by CODVerity and lets WooCommerce restore stock. Leave disabled for merchant review."
+msgstr ""
+
+#: src/Admin.php:181
+msgid "Uninstall cleanup permanently removes verification history and settings. WooCommerce orders and their current statuses remain."
+msgstr ""
+
+#: src/Admin.php:182
+msgid "When disabled, normal processing orders can proceed before verification and customer cancellation is unavailable for them. Existing holds retain their original policy."
+msgstr ""
+
+#: src/Admin.php:185
+msgid "Placeholders: {store_name}, {customer_first_name}, {order_number}, {order_total}, {verification_url}, {expires_at}. Reissuing rotates the link. Retries occur after 5, 30 and 120 minutes from each preceding failure."
+msgstr ""
+
+#: src/Admin.php:186
+msgid "Test email transport"
+msgstr ""
+
+#: src/Admin.php:187
+msgid "Destination email"
+msgstr ""
+
+#: src/Admin.php:187
+msgid "Send test email"
+msgstr ""
+
+#: src/Admin.php:192
+msgid "Verification outcome"
+msgstr ""
+
+#: src/Admin.php:192
+msgid "Requests initiated in selected dates"
+msgstr ""
+
+#: src/Admin.php:192
+msgid "Failed transport attempts (all generations)"
+msgstr ""
+
+#: src/Admin.php:192
+msgid "Average customer response (minutes)"
+msgstr ""
+
+#: src/Admin.php:195
+msgid "No requests match these filters."
+msgstr ""
+
+#: src/Admin.php:196
+msgid "Dates select request creation in the site timezone. Outcomes reflect current request state. Response time measures the latest generation issue to a customer decision; staff decisions and nonresponses are excluded. Verification does not measure payment or delivery success."
+msgstr ""
+
+#: src/Admin.php:199
+msgid "Export filtered CSV"
+msgstr ""
+
+#: src/Admin.php:208
+msgid "Time"
+msgstr ""
+
+#: src/Admin.php:208
+msgid "Order ID"
+msgstr ""
+
+#: src/Admin.php:208
+msgid "Event"
+msgstr ""
+
+#: src/Admin.php:208
+msgid "Actor"
+msgstr ""
+
+#: src/Admin.php:208
+msgid "Transition"
+msgstr ""
+
+#: src/Admin.php:208
+msgid "Safe diagnostic code"
+msgstr ""
+
+#: src/Admin.php:211
+msgid "No verification activity has been recorded yet."
+msgstr ""
+
+#: src/Admin.php:215
+msgid "Check"
+msgstr ""
+
+#: src/Admin.php:215
+msgid "Current value"
+msgstr ""
+
+#: src/Admin.php:215
+msgid "Guidance"
+msgstr ""
+
+#: src/Admin.php:228
+msgid "Customer response:"
+msgstr ""
+
+#: src/Admin.php:228
+msgid "Attempts:"
+msgstr ""
+
+#: src/Admin.php:230
+msgid "Suspected duplicate (advisory only)"
+msgstr ""
+
+#: src/Admin.php:230
+msgid "Matched phone digits, country, currency, total, products and quantities when enrolled."
+msgstr ""
+
+#: src/Admin.php:236
+msgid "No verification request. Use the queue to test eligibility or explicitly start verification."
+msgstr ""
+
+#: src/Admin.php:237
+msgid "Manage verification actions"
+msgstr ""
+
+#: src/Admin.php:241
+msgid "POST is required."
+msgstr ""
+
+#: src/Admin.php:245
+msgid "Action completed."
+msgstr ""
+
+#: src/Admin.php:255
+msgid "Test email accepted by mail transport. Inbox delivery is not proven."
+msgstr ""
+
+#: src/Admin.php:255
+msgid "Mail transport rejected the test email. Check mail configuration."
+msgstr ""
+
+#: src/Admin.php:265
+msgid "Eligibility result:"
+msgstr ""
+
+#: src/Admin.php:279
+msgid "The action could not be completed. Review the order state, cooldown, and Diagnostics, then retry. Code:"
+msgstr ""
+
+#: src/Diagnostics.php:19
+msgid "HPOS enabled"
+msgstr ""
+
+#: src/Diagnostics.php:20
+msgid "Action Scheduler"
+msgstr ""
+
+#: src/Diagnostics.php:20
+msgid "If unavailable, check WooCommerce activation and its scheduled actions screen."
+msgstr ""
+
+#: src/Diagnostics.php:21
+msgid "Pending CODVerity jobs (capped at 100)"
+msgstr ""
+
+#: src/Diagnostics.php:21
+msgid "Inspect WooCommerce → Status → Scheduled Actions; filter by codverity."
+msgstr ""
+
+#: src/Diagnostics.php:22
+msgid "Traffic-based WP-Cron"
+msgstr ""
+
+#: src/Diagnostics.php:22
+msgid "Use a reliable server cron to run due WordPress events every minute."
+msgstr ""
+
+#: src/Diagnostics.php:23
+msgid "Use HTTPS for the site and administration URLs before sending live links."
+msgstr ""
+
+#: src/Diagnostics.php:24
+msgid "COD gateway enabled"
+msgstr ""
+
+#: src/Diagnostics.php:24
+msgid "Enable Cash on delivery in WooCommerce payment settings."
+msgstr ""
+
+#: src/Diagnostics.php:25
+msgid "Database schema"
+msgstr ""
+
+#: src/Diagnostics.php:25
+msgid "Expected schema: 1. Reactivate after resolving database permissions; back up first."
+msgstr ""
+
+#: src/Diagnostics.php:26
+msgid "Last mail transport result"
+msgstr ""
+
+#: src/Diagnostics.php:26
+msgid "Acceptance does not prove delivery. Check your WordPress mail transport and spam filters."
+msgstr ""
+
+#: src/Diagnostics.php:27
+msgid "Last reconciliation"
+msgstr ""
+
+#: src/Diagnostics.php:27
+msgid "Reconciliation runs every five minutes while cron and Action Scheduler are operational."
+msgstr ""
+
+#: src/Diagnostics.php:28
+msgid "Latest operational error"
+msgstr ""
+
+#: src/Diagnostics.php:28
+msgid "Review Activity Logs and interrupted requests. Reissue uncertain mail only after checking the transport."
+msgstr ""
+
+#: src/Diagnostics.php:29
+msgid "Interrupted requests requiring review"
+msgstr ""
+
+#: src/Diagnostics.php:29
+msgid "Review the interrupted filter in Verification Queue before fulfillment."
+msgstr ""
+
+#: src/Installer.php:11
+msgid "Activate CODVerity separately for each store. Network-wide activation is not supported."
+msgstr ""
+
+#: src/Notifications.php:42
+msgid "CODVerity mail transport test"
+msgstr ""
+
+#: src/Notifications.php:42
+msgid "This is a transport test. It contains no customer verification link and does not change any order. Acceptance by the transport does not prove inbox delivery."
+msgstr ""
+
+#: src/Plugin.php:15
+msgid "CODVerity requires WooCommerce 9.5 or newer. Verification automation is inactive."
+msgstr ""
+
+#: src/Plugin.php:21
+msgid "CODVerity could not initialize its database. Check database permissions and reactivate the plugin. No new verification is running."
+msgstr ""
+
+#: src/Privacy.php:17
+msgid "We send transactional cash-on-delivery verification emails using our WordPress email transport. CODVerity stores order references, verification decisions, timestamps, audit events and keyed duplicate fingerprints. Verification links expire and are invalidated after resolution. Active verification data is retained until resolved; audit events are normally pruned after 90 days, and resolved request secrets after 365 days. Minimal enrollment records remain to prevent duplicate verification. The store can configure retention and assist with personal-data requests."
+msgstr ""
+
+#: src/Privacy.php:33
+msgid "COD order verification"
+msgstr ""
+
+#: src/Privacy.php:51
+msgid "A busy verification request was retained. Please retry the erasure and review any held order."
+msgstr ""
+
+#: src/PublicEndpoint.php:61
+msgid "Please confirm that you intend to receive your cash-on-delivery order. Payment is due on delivery and has not been collected."
+msgstr ""
+
+#: src/PublicEndpoint.php:62
+msgid "Thank you. Your order confirmation has been recorded. This does not record a payment."
+msgstr ""
+
+#: src/PublicEndpoint.php:63
+msgid "Your cancellation has been recorded. Contact the store if you need help."
+msgstr ""
+
+#: src/PublicEndpoint.php:64
+msgid "This link has expired. Please contact the store for assistance."
+msgstr ""
+
+#: src/PublicEndpoint.php:65
+msgid "This request has already been resolved or is no longer available. No further action was taken."
+msgstr ""
+
+#: src/PublicEndpoint.php:66
+msgid "The order has changed. Please contact the store to review it."
+msgstr ""
+
+#: src/PublicEndpoint.php:67
+msgid "This verification link is invalid or unavailable. Please contact the store."
+msgstr ""
+
+#: src/PublicEndpoint.php:68
+msgid "Verification is temporarily unavailable. Please try again later or contact the store."
+msgstr ""
+
+#: src/PublicEndpoint.php:69
+msgid "Too many requests. Please wait a minute and try again."
+msgstr ""
+
+#: src/PublicEndpoint.php:70
+msgid "This order may already be in fulfillment. Please contact the store to request cancellation."
+msgstr ""
+
+#: src/PublicEndpoint.php:72
+msgid "Order verification"
+msgstr ""
+
+#: src/PublicEndpoint.php:74
+msgid "Confirm Order"
+msgstr ""
+
+#: src/PublicEndpoint.php:75
+msgid "Cancel Order"
+msgstr ""
+
+#: src/Settings.php:18
+msgid "Please confirm order #{order_number} at {store_name}"
+msgstr ""
+
+#: src/Settings.php:19
+msgid ""
+"Hello {customer_first_name},\n"
+"\n"
+"Thank you for ordering from {store_name}. Please confirm or cancel cash-on-delivery order #{order_number} ({order_total}) using this secure page:\n"
+"\n"
+"{verification_url}\n"
+"\n"
+"Please respond before {expires_at}. Payment has not been collected; payment is due on delivery. Confirmation records your intent to receive the order.\n"
+"\n"
+"Thank you,\n"
+"{store_name}"
+msgstr ""
+
+#: src/Settings.php:35
+msgid "Settings fields must contain text or numbers."
+msgstr ""
+
+#: src/Settings.php:43
+#, php-format
+msgid "%1$s must be between %2$d and %3$d."
+msgstr ""
+
+#: src/Settings.php:50
+msgid "Totals must be nonnegative decimals using the store currency precision."
+msgstr ""
+
+#: src/Settings.php:55
+msgid "Maximum total must not be less than minimum total."
+msgstr ""
+
+#: src/Settings.php:60
+msgid "Invalid category selection."
+msgstr ""
+
+#: src/Settings.php:63
+msgid "Category IDs must be positive whole numbers."
+msgstr ""
+
+#: src/Settings.php:68
+msgid "A selected product category no longer exists."
+msgstr ""
+
+#: src/Settings.php:74
+msgid "Enter one or two reminder hours, separated by a comma."
+msgstr ""
+
+#: src/Settings.php:79
+msgid "Reminder hours must be positive and earlier than expiration."
+msgstr ""
+
+#: src/Settings.php:85
+msgid "Email headers must be single lines of at most 250 characters."
+msgstr ""
+
+#: src/Settings.php:90
+msgid "Enter a valid sender email."
+msgstr ""
+
+#: src/Settings.php:94
+msgid "Provide a subject and a message containing {verification_url} (maximum 20,000 bytes)."
+msgstr ""
+
+#: src/Settings.php:98
+msgid "Email templates contain an unsupported placeholder."
+msgstr ""
+
+#: src/Workflow.php:172
+msgid "CODVerity: customer verification workflow (payment is not collected)."
+msgstr ""

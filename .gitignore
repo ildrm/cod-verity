@@ -1,0 +1,8 @@
+/vendor/
+/build/
+/dist/
+/test-results/
+/.phpunit.cache/
+/.env
+/wp-tests/
+/.codebase-memory/

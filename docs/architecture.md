@@ -1,0 +1,21 @@
+# Architecture
+
+The entry point validates dependencies on `plugins_loaded`, installs versioned custom tables and constructs the services. `Installer` handles activation/migration and nondestructive deactivation. `Settings`, `Amount` and `Eligibility` hold validated policy; `Token` derives keyed tokens; `Repository` owns custom-table queries and state compare-and-set; `Workflow` coordinates order transitions; `Notifications` composes mail; `Scheduler` manages asynchronous work. `Admin`, `PublicEndpoint`, `Privacy`, `Diagnostics` and `Duplicates` implement their named boundaries. No runtime Composer dependency exists.
+
+The native `woocommerce_cod_process_payment_order_status` filter receives the gateway-intended status and persisted order. After pure eligibility checks, CODVerity inserts one request (unique `order_id`) before the gateway updates the status. Processing is changed to on-hold only when configured. Native on-hold is preserved. New admin-created pending → on-hold orders are also eligible. Historical orders require explicit staff enrollment. Order reads/writes use `wc_get_order`, order datastores and CRUD; there are no order post-table queries.
+
+Each request stores its generation, random seed, keyed token hash, issue/expiry timestamps, intended/expected status, hold ownership, order-content signature, separate delivery state, send slot/attempt counters, decision intent, response actor and time, resolution time, duplicate fingerprint and safe error classification. Request IDs and order IDs are unique identifiers; timestamps are Unix seconds in UTC. Site-timezone formatting is presentation-only. Requests have unique order/token indexes and state-expiry, state-updated, creation, resolution, fingerprint-time and delivery-time indexes. The append-only events table indexes request, order and UTC creation time. Routine retention/privacy erasure are deliberate exceptions to event immutability.
+
+Initial mail, reminders, expiration, reconciliation and retention use Action Scheduler's public APIs in group `codverity`. No scheduler API is called before `action_scheduler_init`. Arguments contain only request ID, generation, slot and expected attempt. Initial delivery and each reminder have separate bounded attempts. An accepted slot cannot be resent by duplicate jobs. Old generations and terminal requests are inert. A recurring five-minute keyset sweep repairs missing jobs, catches expiry, validates order state and reconciles incomplete decisions. Each page is at most 100 requests and schedules a continuation; CSV uses pages of 250 and queue pages use 25.
+
+MySQL/MariaDB connection-owned `GET_LOCK` serializes each order's plugin operations and normal WooCommerce object saves. A conditional SQL update on ID + generation + previous state atomically claims the decision. The intermediate record stores operation ID, target status and actor before WooCommerce changes. The order stores a matching operation marker via CRUD. Recovery can finish a claim or recognize a write that completed before the final request update. External status/content changes interrupt automation; incompatible order states are never forcefully restored. Locks release explicitly and on connection death. No direct stock operation or `payment_complete()` is performed by the plugin.
+
+Mail is an external side effect without a transaction. If a worker disappears after claiming a send, the next lock owner classifies its result as unknown and requires review rather than automatically duplicating a potentially accepted email. This is an intentional safety choice. `wp_mail()` acceptance is not delivery evidence.
+
+Official API references verified for implementation:
+
+* [WooCommerce COD gateway source](https://github.com/woocommerce/woocommerce/blob/9.5.2/plugins/woocommerce/includes/gateways/cod/class-wc-gateway-cod.php)
+* [HPOS extension recipe book](https://developer.woocommerce.com/docs/features/orders/high-performance-order-storage/recipe-book/)
+* [Action Scheduler public API and initialization](https://actionscheduler.org/api/)
+* [WordPress privacy exporter](https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-exporter-to-your-plugin/)
+* [WordPress privacy eraser](https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-eraser-to-your-plugin/)

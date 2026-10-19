@@ -1,0 +1,11 @@
+name: codverity-test
+services:
+  db:
+    image: mariadb:11.4
+    environment:
+      MARIADB_ROOT_PASSWORD: codverity-local-only
+      MARIADB_DATABASE: codverity
+    ports:
+      - "127.0.0.1:33379:3306"
+    tmpfs:
+      - /var/lib/mysql
